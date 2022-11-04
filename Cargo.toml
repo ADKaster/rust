@@ -103,6 +103,9 @@ object.debug = 0
 # here
 rustc-workspace-hack = { path = 'src/tools/rustc-workspace-hack' }
 
+# Point libc to our local patched checkout
+libc = { @@LIBC_REV_SPEC@@ }
+
 # See comments in `library/rustc-std-workspace-core/README.md` for what's going on
 # here
 rustc-std-workspace-core = { path = 'library/rustc-std-workspace-core' }
