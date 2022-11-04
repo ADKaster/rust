@@ -212,6 +212,7 @@ impl FileDesc {
         target_os = "linux",
         target_os = "haiku",
         target_os = "redox",
+        target_os = "serenity",
         target_os = "vxworks"
     )))]
     pub fn set_cloexec(&self) -> io::Result<()> {
@@ -230,6 +231,7 @@ impl FileDesc {
         target_os = "linux",
         target_os = "haiku",
         target_os = "redox",
+        target_os = "serenity",
         target_os = "vxworks"
     ))]
     pub fn set_cloexec(&self) -> io::Result<()> {

@@ -148,6 +148,13 @@ impl Thread {
         }
     }
 
+    #[cfg(target_os = "serenity")]
+    pub fn set_name(name: &CStr) {
+        unsafe {
+            libc::pthread_setname_np(libc::pthread_self(), name.as_ptr());
+        }
+    }
+
     #[cfg(any(target_os = "macos", target_os = "ios", target_os = "watchos"))]
     pub fn set_name(name: &CStr) {
         unsafe {
